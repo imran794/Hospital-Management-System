@@ -30,12 +30,12 @@ class HomeController extends Controller
     {
         if (Auth::id()) {
             return redirect('home');
-        }else{
-
-
+        }
+        
+        else{
         $doctors = Doctor::latest('id')->get();
         return view('user.home',compact('doctors'));
 
-            }
+        }
     }
 }

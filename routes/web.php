@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\DoctorController;
+use App\Http\Controllers\Admin\AppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::group([ 'as' => 'admin.','prefix' => 'Admin','middleware' => ['auth']], function() {
      Route::resource('doctor', DoctorController::class);
+
+     // appappointment
+
+
+     Route::post('appointment/store', [AppointmentController::class , 'AppointmentStore'])->name('appointment.store');
+
 });

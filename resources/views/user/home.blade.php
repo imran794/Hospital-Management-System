@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/owl-carousel/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/animate/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/theme.css') }}">
+        <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
   </head>
 <body>
 
@@ -58,6 +59,8 @@
 <script src="{{ asset('frontend/assets/vendor/wow/wow.min.js') }}"></script>
 
 <script src="{{ asset('frontend/assets/js/theme.js') }}"></script>
+  <script src="{{ asset('js/iziToast.js') }}"></script>
+    @include('vendor.lara-izitoast.toast')
   
 </body>
 </html>
